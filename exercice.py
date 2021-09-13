@@ -3,18 +3,17 @@
 
 
 def is_even_len(string: str) -> bool:
-    nb_char = len(string) % 2
-    return nb_char
-
+    if len(string) % 2 == 0:
+        return True
 
 def remove_third_char(string: str) -> str:
-    mot = string.replace(string[2], '', 1)
-    return mot
+    string = string.replace(string[2], '', 1)
+    return string
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    mot = string.replace(old_char, new_char)
-    return mot
+    string = string.replace(old_char, new_char)
+    return string
 
 
 def get_nb_char(string: str, char: str) -> int:
@@ -29,7 +28,7 @@ def get_nb_words(sentence: str) -> int:
 
 def main() -> None:
     string = "Bonjour!"
-    parity = 'pair' if is_even_len(string) == 0 else 'impair'
+    parity = 'pair' if is_even_len(string)  else 'impair'
     print(f"Le nombre de caractère dans la chaine '{string}' est {parity}")
 
     string = "Sam est cool!"
