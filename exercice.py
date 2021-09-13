@@ -30,7 +30,7 @@ def get_nb_words(sentence: str) -> int:
     for i in range(len(sentence)):
        if sentence[i] == ' ':
            nb_mot += 1
-    nb_mot += 1
+    nb_mot += 1 # Il n'y a pas d'espace au dernier mot alors j'ajoute 1
     return nb_mot
 
 
