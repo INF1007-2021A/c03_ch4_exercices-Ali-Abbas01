@@ -17,12 +17,20 @@ def replace_char(string: str, old_char: str, new_char: str) -> str:
 
 
 def get_nb_char(string: str, char: str) -> int:
-    nb_char = string.count(char)
+    nb_char = 0
+    for i in range(len(string)):
+        if string[i] == char:
+            nb_char += 1
+
     return nb_char
 
 
 def get_nb_words(sentence: str) -> int:
-    nb_mot = len(sentence.split())
+    nb_mot = 0
+    for i in range(len(sentence)):
+       if sentence[i] == ' ':
+           nb_mot += 1
+    nb_mot += 1
     return nb_mot
 
 
